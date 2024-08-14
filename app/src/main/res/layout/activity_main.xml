@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.example.viewmodelapp.MyViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
@@ -34,6 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
+            android:onClick="@{myViewModel::increaseCounter}"
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
